@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+	<constant name="struts.action.extension" value=","/>
+    <constant name="struts.enable.SlashesInActionNames" value="true" />
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index"/>
+
+        <action name="index" class="com.maurille.blogmanager.actions.IndexAction" method="index" >
+            <result name="success">/index.jsp</result>
+        </action>
+        
+          <action name="post" 
+        		class="com.maurille.blogmanager.actions.PostAction"
+        		method="liste" >
+            <result name="success">/post/liste.jsp</result>
+          </action>
+        
+        <action name="edit/*" 
+        		class="com.maurille.blogmanager.actions.PostAction"
+        		method="editPost" >
+        		<param name="id">{1}</param>
+           		<result name="success">/post/form.jsp</result>
+       </action>
+         <action name="create" 
+        		class="com.maurille.blogmanager.actions.PostAction"
+        		method="createPost" >
+           		<result name="success">/post/form.jsp</result>
+        </action>
+        
+        <action name="delete" 
+        		class="com.maurille.blogmanager.actions.PostAction"
+        		method="deletePost" >
+           		<result name="success" type ="redirect">/post</result>
+        </action>
+        
+        <action name="save" 
+        		class="com.maurille.blogmanager.actions.PostAction"
+        		method="savePost" >
+        		<result name="input">/post/form.jsp</result>
+           		<result name="success" type="redirect">/post</result>
+        </action>
+        
+
+
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
