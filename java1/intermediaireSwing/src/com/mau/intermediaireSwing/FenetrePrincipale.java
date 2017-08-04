@@ -56,7 +56,7 @@ public class FenetrePrincipale extends JFrame implements ListSelectionListener {
 		panelTri.add(triPoidsbt);
 		
 		
-		// ajout du panel en g=haut de la fenetre
+		// ajout du panel en haut de la fenetre
 		add(panelTri, BorderLayout.NORTH);
 		
 		

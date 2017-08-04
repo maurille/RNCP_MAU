@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+ "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+ <validators>
+	 <field name = "libelle">
+		 <field-validator type="requiredstring">
+		 	<param name="trim">true</param>
+		 	<message> le champs libelle doit etre rempli </message>
+		 </field-validator>
+		 <field-validator type="stringlength">
+			 <param name="minLength">3</param>
+			 <param name="maxlength">50</param>
+			 <param name="trim">true</param>
+			 <message>le libelle doit faire entre {$minLength} et {$maxLength} caratères </message>
+		 </field-validator>
+	 </field>
+	 
+	 <field name = "prix">
+		 <field-validator type="required">
+		 	<message> le prix est requis </message>
+		 </field-validator>
+		 <field-validator type="double">
+			 <param name="minExclusive">0</param>
+			 <message>le prix doit etre superieur à 0 </message>
+		 </field-validator>
+	 </field>
+	 <field name="destination">
+	 	<field-validator type="regex">
+	 		<param name="regex"><![CDATA[([-a-zA-Z ]+)]]></param>
+	 		<message> Destination doit etre alphabetique </message>
+	 	</field-validator>
+	 </field>
+ </validators>

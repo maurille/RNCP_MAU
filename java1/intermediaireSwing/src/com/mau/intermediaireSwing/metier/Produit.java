@@ -16,7 +16,7 @@ public static final  Predicate<Produit> FROMAGE_CATEGORIE_FILTER
 								= p -> p.getCategorie().equals("fromage");
 								
 public static final  Predicate<Produit> CEREALE_CATEGORIE_FILTER
-								= p -> p.getCategorie().equals("creales");
+								= p -> p.getCategorie().equals("cereales");
 public static final  Predicate<Produit> LEGUMES_CATEGORIE_FILTER
 								= p -> p.getCategorie().equals("legumes");
 public static final  Predicate<Produit> DIVERS_CATEGORIE_FILTER
