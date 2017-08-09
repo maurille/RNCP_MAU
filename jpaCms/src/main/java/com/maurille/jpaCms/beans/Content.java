@@ -1,5 +1,7 @@
 package com.maurille.jpaCms.beans;
 
+
+
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,6 +16,7 @@ import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
 import com.maurille.jpaCms.utils.Horodatable;
 import com.maurille.jpaCms.utils.Horodateur;
 

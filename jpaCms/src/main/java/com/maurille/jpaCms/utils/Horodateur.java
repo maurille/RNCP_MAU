@@ -1,5 +1,6 @@
 package com.maurille.jpaCms.utils;
 
+
 import java.time.LocalDateTime;
 
 import javax.persistence.PrePersist;
